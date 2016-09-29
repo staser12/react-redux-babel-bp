@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader'
 import MainComponent from './components/MainComponent';
 
-
 ReactDOM.render(
   <AppContainer>
   <MainComponent />
@@ -18,8 +17,7 @@ if (module.hot) {
     ReactDOM.render(
       <AppContainer>
         <NextApp/>
-      </AppContainer>
-      ,
+      </AppContainer>,
       document.getElementById('app')
     );
   });

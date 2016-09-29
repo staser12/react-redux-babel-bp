@@ -1,13 +1,15 @@
 import React from 'react';
 import NewComponent from './NewComponent';
+import makeStore from './store';
+
+export const store = makeStore();
 
 class MainComponent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
-      <NewComponent/>
+      <Provider store={store}>
+        <NewComponent/>
+      </Provider>
     );
   }
 }

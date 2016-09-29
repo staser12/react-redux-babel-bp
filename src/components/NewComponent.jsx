@@ -1,12 +1,13 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import ListComponent from './ListComponent';
+import {Provider} from 'react-redux';
 
 class NewComponent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
   render() {
     return (
-      <div>This is a new component --- 2!</div>
+      <ListComponent />
     );
   }
 }
