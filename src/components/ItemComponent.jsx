@@ -1,11 +1,16 @@
 import React, { Component, PropTypes } from 'react'
 
-export default class Item extends Component {
+class Item extends Component {
   constructor(props) {
-    super(props);
-  }
-  state = {
-    text: this.props.text || 'new item'
+    super(props)
+    this.state = {
+      text: this.props.text || 'new item'
+    }
+
+    // binding this to functions
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSave = this.handleSave.bind(this)
   }
 
   handleChange(e) {
@@ -35,10 +40,10 @@ export default class Item extends Component {
           value={this.state.text}
           onChange={this.handleChange}
           onKeyDown={this.handleSubmit} />
-        <button onClick={() => deleteItem(item.id)} />
+        <button onClick={() => deleteItem(item)}>Delete</button>
       </div>
     )
   }
 }
 
-Item.state
+export default Item

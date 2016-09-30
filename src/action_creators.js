@@ -7,10 +7,10 @@ export function setState(state) {
   }
 }
 
-export function addItem(item) {
+export function addItem(text) {
   return {
     type: 'ADD_ITEM',
-    item
+    text
   }
 }
 

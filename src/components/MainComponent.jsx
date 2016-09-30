@@ -1,8 +1,9 @@
-import React from 'react';
-import NewComponent from './NewComponent';
-import makeStore from './store';
+import React from 'react'
+import NewComponent from './NewComponent'
+import makeStore from '../store'
+import {Provider} from 'react-redux'
 
-export const store = makeStore();
+export const store = makeStore()
 
 class MainComponent extends React.Component {
   render() {
@@ -14,4 +15,4 @@ class MainComponent extends React.Component {
   }
 }
 
-export default MainComponent;
+export default MainComponent
